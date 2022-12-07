@@ -389,7 +389,119 @@ nav ul {
   flex-direction: column;
 }
 /* ------------------------------------------ */
+/* ---------------FOR THE ABOUT PAGE ONLY------------------------ */
 
+.logindiv {
+  font-size: 30px;
+  box-sizing: border-box;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+.login {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  text-align: center;
+  border-radius: 0.2em;
+  width: 10em;
+  
+  animation: pop-in 1s;
+}
+
+.title{
+  font-size: 0.5em;
+  background-color: #980200;
+  color:#F5F5F5;
+  border-radius: 0.2em 0.2em 0px 0px;
+  transform-origin: left center;
+  opacity: 0;
+  
+  animation-delay: 0.5s;
+  animation-name: slideX;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+
+.login input {
+  padding: 5px;
+  margin: 5px;
+  animation: pop-in 1s;
+  font-size: 15px;
+}
+
+/* .formdata input[type="text"]{
+  border-radius: 1em;
+  border: none;
+  background-color: rgb(152,2,0,0.15);
+  color: #37474F;
+} */
+
+.login input:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.login input:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.login input:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+#submit {
+  background-color: rgb(152,2,0);
+  border: none;
+  color: #F5F5F5;
+ 
+}
+
+@keyframes pop-in {
+  0%{
+    transform: scale(0) translateY(100px);
+    opacity: 0;
+  }
+  50%{
+    transform: scale(1.05) translateY(-10px);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideX {
+  FROM{
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  TO{
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;
+    
+  }
+}
+
+
+/* ---------------END OF ABOUT PAGE------------------------------ */
 
 @media (min-width: 401px) {
   /* tablet CSS */
@@ -483,6 +595,7 @@ nav li {
 }
 
 }
+
 
 @media (min-width: 601px) {
   .contact form {

@@ -45,6 +45,21 @@
     </nav>
   </header>
 
+
+  <div class="logindiv">
+    <div class="login" id="loginID">
+      <div class="title">
+        <h1>Create an Account</h1>
+      </div>
+      <div class="formData">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Password">
+        <input type="button" id="submit" value="Log In" onclick="submitForm()">
+      </div>
+    </div>
+  </div>
+
+
   <main>
     <h1>About</h1>
     <img srcset="../images/kitchen-300w.jpg 300w,
@@ -52,6 +67,19 @@
          ../images/kitchen-900w.jpg 900w" sizes="50vw" src="../images/kitchen-600w.jpg"
       alt="Kitchen counter with cookbook open." width="600" height="400">
   </main>
+
+
+  <script>
+    var login = document.querySelector('#loginID');
+
+    function submitForm() {
+      login.style.animationFillMode = "forwards";
+      login.style.animationName = "slideUp";
+      // setTimeout(function () {
+      //   login.style.animationName = "pop-in";
+      // }, 1000);
+    }
+  </script>
 </body>
 
 </html>
