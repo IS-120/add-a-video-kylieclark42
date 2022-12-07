@@ -410,12 +410,14 @@ nav ul {
 }
 
 .title{
-  font-size: 0.5em;
+  font-size: 0.6em;
   background-color: #980200;
   color:#F5F5F5;
   border-radius: 0.2em 0.2em 0px 0px;
   transform-origin: left center;
   opacity: 0;
+  padding: 25px;
+  margin: 0px;
   
   animation-delay: 0.5s;
   animation-name: slideX;
