@@ -122,44 +122,58 @@ nav li a:hover {
 
 /*------ HERO SETUP ------*/
 .hero {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
   position: relative;
-  color: var(--white);
-  margin-bottom: 6rem;
-  align-self: stretch;
   display: flex;
-  justify-content: center;
-  /* height: 100vh; */
- }
-
- /* this will center then crop the image to fit the hero container */
-.hero img {
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.hero h1 {
-  font-size: clamp(1rem, 7vw, 7rem);
-  margin: 0;
- }
-
-.hero_overlay {
-  position: absolute;
-  align-self: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  text-shadow: 2px 3px #333;
-  font-size: clamp(1rem, 4vw, 3.25rem);
-  display: flex;
-  inset: 10 0 0 0;
   align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
+
+.hero-text {
+  color: #fff;
+  padding: 0 1rem 2rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 9vw, 8rem);
+  line-height: 1;
+  margin: 0;
+  text-shadow: 1px 1px 2px black;
+}
+
+.video-background {
+  background: #000;
+  position: absolute;
+  inset: 0;
+  z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* because frameborder attribute of iframe is deprecated */
+iframe {
+  border: 0;
+}
+
+
+
 
 main {
   padding: 0 1rem;
   width: 100%;
   max-width: 70rem;
-  margin: 0 auto;
+  margin: 3rem auto;
+  max-width: 60rem;
 }
 
 article {
@@ -500,4 +514,18 @@ nav li {
   }
   .cards > * {
     flex: 1 1 0;}
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .video-foreground {
+      height: 300%;
+      top: -100%;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .video-foreground {
+      width: 300%;
+      left: -100%;
+    }
   }
