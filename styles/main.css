@@ -135,7 +135,13 @@ nav li a:hover {
 .hero-text {
   color: #fff;
   padding: 0 1rem 2rem;
+  font-size: clamp(.25rem, 3vw, 4rem);
 }
+
+.hero h1 {
+  font-size: clamp(1rem, 7vw, 7rem);
+  margin: 0;
+ }
 
 .hero-text h1 {
   font-size: clamp(2rem, 9vw, 8rem);
