@@ -537,7 +537,7 @@ h2{
 
 /*-------Navigation-----*/
 header {
-  background-color: black;
+  background-color: var(--dark-red);
   color: var(--white);
   display: flex;
   justify-content: flex-end;
