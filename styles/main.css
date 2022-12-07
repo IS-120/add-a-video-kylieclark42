@@ -433,12 +433,7 @@ nav ul {
   font-size: 15px;
 }
 
-/* .formdata input[type="text"]{
-  border-radius: 1em;
-  border: none;
-  background-color: rgb(152,2,0,0.15);
-  color: #37474F;
-} */
+
 
 .login input:nth-child(1) {
   animation-delay: 0.1s;
@@ -542,7 +537,7 @@ h2{
 
 /*-------Navigation-----*/
 header {
-  background-color: var(--dark-red);
+  background-color: black;
   color: var(--white);
   display: flex;
   justify-content: flex-end;
