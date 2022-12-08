@@ -542,6 +542,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-self: stretch;
+  /* border-bottom: #000; */
 }
 
 header ul {
